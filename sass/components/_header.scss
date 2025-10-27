@@ -1,0 +1,203 @@
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100px 100px;;
+    background: #EEAECA;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(150, 107, 110, 1) 100%);
+    border-bottom: solid 1px rgb(102, 67, 96);
+    
+&__container {
+display: flex;
+justify-content: space-between;
+}
+&__nav {
+    
+}
+&__list {
+    display: none;
+}
+&__item {
+}
+&__link {
+  color: rgb(80, 64, 77);
+   text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-family: 'gothic';
+  text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
+  white-space: nowrap;
+  pointer-events: none;
+}
+  &__dropdown {
+   
+}
+&__button {
+    background-color: transparent;
+   color: rgb(80, 64, 77);
+   text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
+}
+&__dropdown-menu {
+       background: #CB5FAB;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(150, 107, 110, 1) 100%);
+width: 50px;
+}
+&__dropdown-item {
+   margin-left: 10px; 
+}
+&__dropdown-link {
+     color: rgb(80, 64, 77);
+   text-decoration: none;
+       font-family: "Open Sans", sans-serif;
+}
+&__logo {
+     text-decoration: none;
+         color: rgb(80, 64, 77);
+     @include logo($size: 24px);
+}
+&__logo__color {
+    @include logo($size: 24px);
+      color: rgb(247, 244, 246);
+}
+&__icon__logo {
+    width: 40px;
+    height: 40px;
+}
+}
+.container {
+}
+.dropdown {
+}
+.dropdown-menu {
+
+}
+
+@media screen and (min-width: 768px) {
+     .header { 
+        &__container {
+display: flex;
+justify-content: space-between;
+}
+&__nav {
+    
+}
+&__list {
+    display: flex;
+    gap: 30px;
+ 
+}
+&__item {
+}
+&__link {
+  color: rgb(80, 64, 77);
+   text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+  &__dropdown {
+   
+}
+&__button {
+    background-color: transparent;
+   color: rgb(80, 64, 77);
+    font-weight: 600;
+}
+&__dropdown-menu {
+       background: #CB5FAB;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(150, 107, 110, 1) 100%);
+width: 50px;
+}
+&__dropdown-item {
+   margin-left: 10px; 
+}
+&__dropdown-link {
+     color: rgb(80, 64, 77);
+   text-decoration: none;
+       font-family: "Open Sans", sans-serif;
+}
+&__logo {
+     text-decoration: none;
+         color: rgb(80, 64, 77);
+     @include logo($size: 24px);
+}
+&__logo__color {
+    @include logo($size: 24px);
+      color: rgb(247, 244, 246);
+}
+&__icon__logo {
+    width: 40px;
+    height: 40px;
+}
+     }
+}
+@media screen and (min-width: 1200px) {
+     .header {
+          padding-top: 20px;
+    padding-bottom: 10px; 
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100px 100px;;
+    background: #EEAECA;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(150, 107, 110, 1) 100%);
+    border-bottom: solid 1px rgb(102, 67, 96);
+    
+&__container {
+display: flex;
+justify-content: space-between;
+}
+&__nav {
+    
+}
+&__list {
+    display: flex;
+    gap: 30px;
+ 
+}
+&__item {
+}
+&__link {
+  color: rgb(80, 64, 77);
+   text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+  &__dropdown {
+   
+}
+&__button {
+    background-color: transparent;
+   color: rgb(80, 64, 77);
+    font-weight: 600;
+}
+&__dropdown-menu {
+       background: #CB5FAB;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(150, 107, 110, 1) 100%);
+width: 50px;
+}
+&__dropdown-item {
+   margin-left: 10px; 
+}
+&__dropdown-link {
+     color: rgb(80, 64, 77);
+   text-decoration: none;
+       font-family: "Open Sans", sans-serif;
+}
+&__logo {
+     text-decoration: none;
+         color: rgb(80, 64, 77);
+     @include logo($size: 24px);
+}
+&__logo__color {
+    @include logo($size: 24px);
+      color: rgb(247, 244, 246);
+}
+&__icon__logo {
+    width: 40px;
+    height: 40px;
+}
+     }
+    }

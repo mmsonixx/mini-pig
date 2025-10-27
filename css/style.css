@@ -1,0 +1,335 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.body {
+  font-family: "Roboto";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  line-height: 0;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 100px 100px;
+  background: #EEAECA;
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
+  border-bottom: solid 1px rgb(102, 67, 96);
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+.header__list {
+  display: none;
+}
+.header__link {
+  color: rgb(80, 64, 77);
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-family: "gothic";
+  text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.header__button {
+  background-color: transparent;
+  color: rgb(80, 64, 77);
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
+}
+.header__dropdown-menu {
+  background: #CB5FAB;
+  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
+  width: 50px;
+}
+.header__dropdown-item {
+  margin-left: 10px;
+}
+.header__dropdown-link {
+  color: rgb(80, 64, 77);
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+.header__logo {
+  text-decoration: none;
+  color: rgb(80, 64, 77);
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.72px;
+  font-style: normal;
+  line-height: normal;
+}
+.header__logo__color {
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.72px;
+  font-style: normal;
+  line-height: normal;
+  color: rgb(247, 244, 246);
+}
+.header__icon__logo {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__list {
+    display: flex;
+    gap: 30px;
+  }
+  .header__link {
+    color: rgb(80, 64, 77);
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  }
+  .header__button {
+    background-color: transparent;
+    color: rgb(80, 64, 77);
+    font-weight: 600;
+  }
+  .header__dropdown-menu {
+    background: #CB5FAB;
+    background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
+    width: 50px;
+  }
+  .header__dropdown-item {
+    margin-left: 10px;
+  }
+  .header__dropdown-link {
+    color: rgb(80, 64, 77);
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+  }
+  .header__logo {
+    text-decoration: none;
+    color: rgb(80, 64, 77);
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    font-style: normal;
+    line-height: normal;
+  }
+  .header__logo__color {
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    font-style: normal;
+    line-height: normal;
+    color: rgb(247, 244, 246);
+  }
+  .header__icon__logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 100px 100px;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
+    border-bottom: solid 1px rgb(102, 67, 96);
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header__list {
+    display: flex;
+    gap: 30px;
+  }
+  .header__link {
+    color: rgb(80, 64, 77);
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+  }
+  .header__button {
+    background-color: transparent;
+    color: rgb(80, 64, 77);
+    font-weight: 600;
+  }
+  .header__dropdown-menu {
+    background: #CB5FAB;
+    background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
+    width: 50px;
+  }
+  .header__dropdown-item {
+    margin-left: 10px;
+  }
+  .header__dropdown-link {
+    color: rgb(80, 64, 77);
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+  }
+  .header__logo {
+    text-decoration: none;
+    color: rgb(80, 64, 77);
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    font-style: normal;
+    line-height: normal;
+  }
+  .header__logo__color {
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    font-style: normal;
+    line-height: normal;
+    color: rgb(247, 244, 246);
+  }
+  .header__icon__logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+.burger {
+  fill: #000;
+  background-color: transparent;
+}
+
+.burger__icon {
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+}
+.hero {
+  background-color: rgb(0, 0, 0);
+  padding-top: 80px;
+  padding-bottom: 90px;
+  background-image: url("../../img/hero/hawaii-pig.webp");
+  background-repeat: no-repeat;
+  background-size: 600px 400px;
+  background-position: right;
+}
+
+.hero__title {
+  color: aliceblue;
+  text-align: center;
+  font-weight: 400;
+  font-size: 86px;
+  line-height: 70%;
+  text-transform: uppercase;
+  text-align: center;
+  margin-right: 200px;
+}
+
+.hero__text {
+  color: rgb(160, 120, 142);
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 125%;
+  text-align: center;
+  margin-left: 300px;
+}
+
+.hero__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.hero__item {
+  width: 50px;
+  height: 50px;
+}
+
+.hero__icons {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}/*# sourceMappingURL=style.css.map */

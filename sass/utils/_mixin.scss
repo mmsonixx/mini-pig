@@ -1,0 +1,8 @@
+@mixin logo($size: 0, $spacing: 0.72px) {
+    font-family: "Open Sans";
+        font-size: $size;
+        font-weight: 700;
+        letter-spacing: $spacing;
+         font-style: normal;
+    line-height: normal;
+}
