@@ -1,3 +1,4 @@
+@import url(https://fonts.bunny.net/css?family=abel:400);
 *,
 *::before,
 *::after {
@@ -53,7 +54,6 @@ h3 {
 
 img {
   width: 100%;
-  height: auto;
   line-height: 0;
   display: block;
 }
@@ -89,8 +89,8 @@ a {
 }
 .header__link {
   color: rgb(80, 64, 77);
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
+  text-transform: uppercase;
   font-weight: 600;
   font-family: "gothic";
   text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
@@ -100,8 +100,8 @@ a {
 .header__button {
   background-color: transparent;
   color: rgb(80, 64, 77);
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro";
   font-weight: 600;
   text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
 }
@@ -119,7 +119,7 @@ a {
   font-family: "Open Sans", sans-serif;
 }
 .header__logo {
-  text-decoration: none;
+  text-transform: uppercase;
   color: rgb(80, 64, 77);
   font-family: "Open Sans";
   font-size: 24px;
@@ -136,6 +136,7 @@ a {
   font-style: normal;
   line-height: normal;
   color: rgb(247, 244, 246);
+  text-transform: uppercase;
 }
 .header__icon__logo {
   width: 40px;
@@ -285,16 +286,11 @@ a {
   }
 }
 .hero {
-  background-color: rgb(0, 0, 0);
-  padding-top: 80px;
-  padding-bottom: 90px;
-  background-image: url("../../img/hero/hawaii-pig.webp");
-  background-repeat: no-repeat;
-  background-size: 600px 400px;
-  background-position: right;
+  padding-top: 100px;
+  padding-bottom: 40px;
 }
-
 .hero__title {
+  font-family: "Source Sans Pro";
   color: aliceblue;
   text-align: center;
   font-weight: 400;
@@ -304,8 +300,8 @@ a {
   text-align: center;
   margin-right: 200px;
 }
-
 .hero__text {
+  font-family: "Playfair Display";
   color: rgb(160, 120, 142);
   text-align: center;
   font-style: italic;
@@ -315,21 +311,258 @@ a {
   text-align: center;
   margin-left: 300px;
 }
-
 .hero__list {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 30px;
 }
-
 .hero__item {
   width: 50px;
   height: 50px;
 }
-
 .hero__icons {
   width: 30px;
   height: 30px;
   fill: white;
+}
+.hero__info {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #f5ebeb;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: black;
+  background-image: url("../../img/hero/hawaii-pig.webp");
+  background-position: 1200px;
+  background-repeat: no-repeat;
+  background-size: 900px 600px;
+}
+
+.about {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.about__list {
+  display: flex;
+  gap: 120px;
+}
+.about__item {
+  width: 300px;
+}
+.about__icons {
+  margin-left: 130px;
+  align-items: center;
+  fill: #FFFFFF;
+  width: 39px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.about__subtitle {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 32px;
+  text-transform: capitalize;
+  color: #FFFFFF;
+  font-family: "Source Sans 3";
+}
+.about__info {
+  font-family: "Source Sans 3";
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.information {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: black;
+}
+
+@layer base, demo;
+.carousell {
+  background-color: black;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.carousel {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel__title {
+  margin-left: auto;
+  font-family: "Playfair Display";
+  color: rgb(160, 120, 142);
+  font-weight: 600;
+  font-size: 36px;
+  border-bottom: 2px solid rgb(160, 120, 142);
+  margin-bottom: 110px;
+  width: 500px;
+}
+
+.carousell__box {
+  padding-bottom: 20px;
+}
+
+.carousel__link {
+  text-decoration: none;
+  text-transform: lowercase;
+  border: 1px solid var(--clr-cta);
+  color: light-dark(var(--clr-cta), white);
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  place-self: start;
+  transition: 150ms ease-in-out;
+}
+.carousel__link:hover, .carousel__link:focus-visible {
+  background-color: var(--clr-cta);
+  color: white;
+  outline: none;
+}
+
+@layer demo {
+  .carousel {
+    --items: 6;
+    --carousel-duration: 40s;
+    --carousel-width: min(
+    	80vw,
+    	1200px
+    ); /* note - it will "break" if it gets too wide and there aren't enough items */
+    --carousel-item-width: 280px;
+    --carousel-item-height: 450px;
+    --carousel-item-gap: 2rem;
+    --clr-cta: rgb(0, 132, 209);
+    position: relative;
+    width: var(--carousel-width);
+    height: var(--carousel-item-height);
+    overflow: clip;
+    /* hover pauses animation */
+  }
+  @media (width > 600px) {
+    .carousel {
+      --carousel-duration: 30s;
+    }
+  }
+  .carousel[mask] {
+    /* fade out on sides */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10% 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10% 90%, transparent);
+  }
+  .carousel[reverse] > article {
+    animation-direction: reverse;
+  }
+  .carousel:hover > article {
+    animation-play-state: paused;
+  }
+  .carousel > article {
+    position: absolute;
+    top: 0;
+    left: calc(100% + var(--carousel-item-gap));
+    width: var(--carousel-item-width);
+    height: var(--carousel-item-height);
+    display: grid;
+    grid-template-rows: 200px auto 1fr auto;
+    gap: 0.25rem;
+    border: 1px solid light-dark(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.15));
+    padding-block-end: 1rem;
+    border-radius: 10px;
+    background: light-dark(white, rgba(255, 255, 255, 0.05));
+    color: light-dark(rgb(49, 65, 88), white);
+    /* animation */
+    will-change: transform;
+    animation-name: marquee;
+    animation-duration: var(--carousel-duration);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: calc(var(--carousel-duration) / var(--items) * 1 * var(--i) * -1);
+  }
+  .carousel > article:nth-child(1) {
+    --i: 0;
+  }
+  .carousel > article:nth-child(2) {
+    --i: 1;
+  }
+  .carousel > article:nth-child(3) {
+    --i: 2;
+  }
+  .carousel > article:nth-child(4) {
+    --i: 3;
+  }
+  .carousel > article:nth-child(5) {
+    --i: 4;
+  }
+  .carousel > article:nth-child(6) {
+    --i: 5;
+  }
+  .carousel > article:nth-child(7) {
+    --i: 6;
+  }
+  .carousel > article:nth-child(8) {
+    --i: 7;
+  }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  .carousel > article > *:not(img) {
+    padding: 0 1rem;
+  }
+  .carousel > article > div {
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: subgrid;
+    font-size: 0.8rem;
+  }
+  .carousel > article h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    padding-block: 0.75rem 0.25rem;
+    margin: 0;
+  }
+  .carousel > article p {
+    margin: 0;
+  }
+  .carousel > article a {
+    text-decoration: none;
+    text-transform: lowercase;
+    border: 1px solid var(--clr-cta);
+    color: light-dark(var(--clr-cta), white);
+    border-radius: 3px;
+    padding: 0.25rem 0.5rem;
+    place-self: start;
+    transition: 150ms ease-in-out;
+  }
+  .carousel > article a:hover, .carousel > article a:focus-visible {
+    background-color: var(--clr-cta);
+    color: white;
+    outline: none;
+  }
+  @keyframes marquee {
+    100% {
+      transform: translateX(calc(var(--items) * (var(--carousel-item-width) + var(--carousel-item-gap)) * -1));
+    }
+  }
+}
+/* general styling */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  :root {
+    color-scheme: light dark;
+    --bg-dark: rgb(2, 6, 24);
+    --bg-light: rgb(229, 229, 229);
+    --txt-light: rgb(10, 10, 10);
+    --txt-dark: rgb(245, 245, 245);
+  }
 }/*# sourceMappingURL=style.css.map */

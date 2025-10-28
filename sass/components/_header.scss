@@ -22,8 +22,8 @@ justify-content: space-between;
 }
 &__link {
   color: rgb(80, 64, 77);
-   text-decoration: none;
-    font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro";
+  text-transform: uppercase;
     font-weight: 600;
     font-family: 'gothic';
   text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
@@ -36,8 +36,8 @@ justify-content: space-between;
 &__button {
     background-color: transparent;
    color: rgb(80, 64, 77);
-   text-decoration: none;
-    font-family: "Open Sans", sans-serif;
+   text-transform: uppercase;
+    font-family: "Source Sans Pro";
     font-weight: 600;
   text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
 }
@@ -55,20 +55,19 @@ width: 50px;
        font-family: "Open Sans", sans-serif;
 }
 &__logo {
-     text-decoration: none;
+    text-transform: uppercase;
          color: rgb(80, 64, 77);
      @include logo($size: 24px);
 }
 &__logo__color {
     @include logo($size: 24px);
       color: rgb(247, 244, 246);
+      text-transform: uppercase;
 }
 &__icon__logo {
     width: 40px;
     height: 40px;
 }
-}
-.container {
 }
 .dropdown {
 }
