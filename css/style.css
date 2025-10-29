@@ -84,42 +84,9 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.header__list {
-  display: none;
-}
-.header__link {
-  color: rgb(80, 64, 77);
-  font-family: "Source Sans Pro";
-  text-transform: uppercase;
-  font-weight: 600;
-  font-family: "gothic";
-  text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
-  white-space: nowrap;
-  pointer-events: none;
-}
-.header__button {
-  background-color: transparent;
-  color: rgb(80, 64, 77);
-  text-transform: uppercase;
-  font-family: "Source Sans Pro";
-  font-weight: 600;
-  text-shadow: 0 0 10px rgb(80, 64, 77), 0 0 20px #6b3d6b, 0 0 30px rgb(102, 85, 99);
-}
-.header__dropdown-menu {
-  background: #CB5FAB;
-  background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
-  width: 50px;
-}
-.header__dropdown-item {
-  margin-left: 10px;
-}
-.header__dropdown-link {
-  color: rgb(80, 64, 77);
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-}
 .header__logo {
-  text-transform: uppercase;
+  margin-top: 10px;
+  text-decoration: none;
   color: rgb(80, 64, 77);
   font-family: "Open Sans";
   font-size: 24px;
@@ -136,135 +103,95 @@ a {
   font-style: normal;
   line-height: normal;
   color: rgb(247, 244, 246);
-  text-transform: uppercase;
 }
 .header__icon__logo {
   width: 40px;
   height: 40px;
 }
 
-@media screen and (min-width: 768px) {
-  .header__container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .header__list {
-    display: flex;
-    gap: 30px;
-  }
-  .header__link {
-    color: rgb(80, 64, 77);
-    text-decoration: none;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-  }
-  .header__button {
-    background-color: transparent;
-    color: rgb(80, 64, 77);
-    font-weight: 600;
-  }
-  .header__dropdown-menu {
-    background: #CB5FAB;
-    background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
-    width: 50px;
-  }
-  .header__dropdown-item {
-    margin-left: 10px;
-  }
-  .header__dropdown-link {
-    color: rgb(80, 64, 77);
-    text-decoration: none;
-    font-family: "Open Sans", sans-serif;
-  }
-  .header__logo {
-    text-decoration: none;
-    color: rgb(80, 64, 77);
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-    font-style: normal;
-    line-height: normal;
-  }
-  .header__logo__color {
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-    font-style: normal;
-    line-height: normal;
-    color: rgb(247, 244, 246);
-  }
-  .header__icon__logo {
-    width: 40px;
-    height: 40px;
-  }
+nav {
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  animation: slide-in 1s ease-out;
 }
-@media screen and (min-width: 1200px) {
-  .header {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 100px 100px;
-    background: #EEAECA;
-    background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
-    border-bottom: solid 1px rgb(102, 67, 96);
+
+ul {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0 30px;
+  list-style-type: none;
+}
+ul li:not(:last-child) {
+  margin-right: 40px;
+}
+ul li {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background 0.2s;
+}
+ul li a {
+  color: rgba(95, 59, 68, 0.7);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  font-weight: 700;
+}
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: block;
+  margin: 12px -12px;
+  padding: 0;
+  background: #8a737e;
+  border: 2px solid #856a77;
+  border-right: 2px solid #a18090;
+  border-bottom: 2px solid #ac899a;
+  border-radius: 5px;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+ul li ul li {
+  margin: -2px 0 0 -2px;
+  width: calc(100% - 20px);
+  line-height: 1.7;
+}
+ul li ul li a {
+  color: rgba(185, 106, 127, 0.7);
+}
+ul li:hover {
+  background: #856a77;
+  border: 2px solid #856a77;
+  border-right: 2px solid #856a77;
+  border-bottom: 2px solid #856a77;
+}
+ul li:hover a {
+  color: #F9F8FD;
+}
+ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  box-shadow: 0px 3px 5px 2px #EBECF1;
+}
+ul li:hover ul li a {
+  color: #F9F8FD;
+}
+
+@keyframes slide-in {
+  0% {
+    top: -50px;
   }
-  .header__container {
-    display: flex;
-    justify-content: space-between;
+  40% {
+    top: 20px;
   }
-  .header__list {
-    display: flex;
-    gap: 30px;
+  70% {
+    top: 10px;
   }
-  .header__link {
-    color: rgb(80, 64, 77);
-    text-decoration: none;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-  }
-  .header__button {
-    background-color: transparent;
-    color: rgb(80, 64, 77);
-    font-weight: 600;
-  }
-  .header__dropdown-menu {
-    background: #CB5FAB;
-    background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(150, 107, 110) 100%);
-    width: 50px;
-  }
-  .header__dropdown-item {
-    margin-left: 10px;
-  }
-  .header__dropdown-link {
-    color: rgb(80, 64, 77);
-    text-decoration: none;
-    font-family: "Open Sans", sans-serif;
-  }
-  .header__logo {
-    text-decoration: none;
-    color: rgb(80, 64, 77);
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-    font-style: normal;
-    line-height: normal;
-  }
-  .header__logo__color {
-    font-family: "Open Sans";
-    font-size: 24px;
-    font-weight: 700;
-    letter-spacing: 0.72px;
-    font-style: normal;
-    line-height: normal;
-    color: rgb(247, 244, 246);
-  }
-  .header__icon__logo {
-    width: 40px;
-    height: 40px;
+  100% {
+    top: 15px;
   }
 }
 .burger {
@@ -302,7 +229,7 @@ a {
 }
 .hero__text {
   font-family: "Playfair Display";
-  color: rgb(160, 120, 142);
+  color: rgba(185, 106, 127, 0.7);
   text-align: center;
   font-style: italic;
   font-weight: 500;
@@ -380,15 +307,59 @@ a {
 
 .information {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 145px;
+}
+
+.information__wrapper {
   background-color: black;
+  background-image: linear-gradient(rgba(185, 106, 127, 0.7), rgba(185, 106, 127, 0.7)), url(../../img/information/black-pig.webp);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 100% 550px, 776px;
+  background-position: 0% 150px, -240px 150px;
+}
+
+.information__title {
+  text-align: end;
+  font-family: "Playfair Display";
+  color: rgba(185, 106, 127, 0.7);
+  font-weight: 600;
+  font-size: 36px;
+  border-bottom: 2px solid rgba(185, 106, 127, 0.7);
+  margin-bottom: 110px;
+  width: 500px;
+}
+
+.accordion {
+  background: #cf9daf;
+  background: radial-gradient(circle, rgb(207, 157, 175) 1%, rgb(150, 107, 110) 100%);
+}
+
+.accordion-item {
+  background: #cf9daf;
+  background: radial-gradient(circle, rgb(207, 157, 175) 1%, rgb(150, 107, 110) 100%);
+}
+
+.accordion-button {
+  background: #cf9daf;
+  background: radial-gradient(circle, rgb(207, 157, 175) 1%, rgb(150, 107, 110) 100%);
+}
+
+.accordion-button::after {
+  color: white;
+}
+
+.accordion-body {
+  font-family: "Source Sans 3";
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
 }
 
 @layer base, demo;
 .carousell {
   background-color: black;
   padding-bottom: 100px;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .carousel {
@@ -399,10 +370,10 @@ a {
 .carousel__title {
   margin-left: auto;
   font-family: "Playfair Display";
-  color: rgb(160, 120, 142);
+  color: rgba(185, 106, 127, 0.7);
   font-weight: 600;
   font-size: 36px;
-  border-bottom: 2px solid rgb(160, 120, 142);
+  border-bottom: 2px solid rgba(185, 106, 127, 0.7);
   margin-bottom: 110px;
   width: 500px;
 }
@@ -565,4 +536,26 @@ a {
     --txt-light: rgb(10, 10, 10);
     --txt-dark: rgb(245, 245, 245);
   }
+}
+.text-center {
+  background-color: black;
+  padding-top: 50px;
+}
+
+.btn:hover {
+  fill: black;
+}
+
+.btn-outline-light {
+  border-radius: 50%;
+}
+
+.footer__iocns {
+  width: 20px;
+  height: 30px;
+  fill: white;
+}
+
+.footer__link:hover {
+  fill: black;
 }/*# sourceMappingURL=style.css.map */

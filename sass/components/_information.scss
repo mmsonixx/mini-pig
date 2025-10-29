@@ -1,10 +1,57 @@
 .information {
     padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: black;
+    padding-bottom: 145px;
+    // background-color: black;
 }
 .container {
 }
+.information__wrapper {
+    background-color: black;
+background-image: linear-gradient(rgba(185, 106, 127, 0.7), rgba(185, 106, 127, 0.7)), url(../../img/information/black-pig.webp);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100% 550px, 776px;
+    background-position: 0% 150px, -240px 150px;
+}
 .information__container {
 }
-
+.information__title {
+    text-align: end;
+    font-family: "Playfair Display";
+    color: rgba(185, 106, 127, 0.7);
+    font-weight: 600;
+font-size: 36px;
+border-bottom: 2px solid rgba(185, 106, 127, 0.7);
+margin-bottom: 110px;
+width: 500px;
+}
+.accordion {
+   background: #cf9daf;
+background: radial-gradient(circle,rgba(207, 157, 175, 1) 1%, rgba(150, 107, 110, 1) 100%);
+}
+.accordion-item {
+background: #cf9daf;
+background: radial-gradient(circle,rgba(207, 157, 175, 1) 1%, rgba(150, 107, 110, 1) 100%);
+}
+.accordion-header {
+}
+.accordion-button {
+   background: #cf9daf;
+background: radial-gradient(circle,rgba(207, 157, 175, 1) 1%, rgba(150, 107, 110, 1) 100%);
+}
+.accordion-button::after {
+    color: white;
+}
+.accordion-collapse {
+}
+.collapse {
+}
+.show {
+}
+.accordion-body {
+    font-family: "Source Sans 3";
+    font-weight: 400;
+font-size: 16px;
+color: #FFFFFF;
+}
+.collapsed {
+}
