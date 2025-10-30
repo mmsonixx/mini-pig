@@ -12,6 +12,91 @@
     color: aliceblue;
     text-align: center;
     font-weight: 400;
+font-size: 46px;
+line-height: 70%;
+text-transform: uppercase;
+text-align: center;
+
+}
+&__text {
+    font-family: "Playfair Display";
+    color: rgba(185, 106, 127, 0.7);
+    text-align: center;
+    font-style: italic;
+font-weight: 500;
+font-size: 38px;
+line-height: 125%;
+text-align: center;
+
+}
+&__info {
+  font-family: "Source Sans Pro";  
+  font-weight: 400;
+font-size: 15px;
+text-transform: capitalize;
+color: #f5ebeb;
+margin-top: 60px;
+text-align: center;
+}
+}
+.wrapper {
+   background-color: black;
+ background-image: url("../img/hero/hawaii-pig.webp");
+background-position:  210px  310px ;
+background-repeat: no-repeat;
+background-size: 350px 250px;
+}
+@media screen and (min-width: 768px) {
+    .hero {
+&__title {
+    font-family: "Source Sans Pro";
+    color: aliceblue;
+    text-align: center;
+    font-weight: 400;
+font-size: 56px;
+line-height: 70%;
+text-transform: uppercase;
+text-align: center;
+
+}
+&__text {
+    font-family: "Playfair Display";
+    color: rgba(185, 106, 127, 0.7);
+    text-align: center;
+    font-style: italic;
+font-weight: 500;
+font-size: 40px;
+line-height: 125%;
+text-align: center;
+
+}
+&__info {
+  font-family: "Source Sans Pro";  
+  font-weight: 400;
+font-size: 20px;
+text-transform: capitalize;
+color: #f5ebeb;
+margin-top: 60px;
+text-align: center;
+}
+    }
+    .wrapper {
+   background-color: black;
+background-image: url("../img/hero/hawaii-pig.webp");
+background-position:  400px  280px ;
+background-repeat: no-repeat;
+background-size: 500px 350px;
+ 
+}
+}
+
+@media screen and (min-width: 1200px) {
+ .hero {
+&__title {
+    font-family: "Source Sans Pro";
+    color: aliceblue;
+    text-align: center;
+    font-weight: 400;
 font-size: 86px;
 line-height: 70%;
 text-transform: uppercase;
@@ -29,23 +114,6 @@ line-height: 125%;
 text-align: center;
 margin-left: 300px;
 }
-&__list {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-}
-&__item {
-      width: 50px;
-    height: 50px;
-}
-&__link {
-}
-&__icons {
-     width: 30px;
-    height: 30px;
-    fill: white;
-}
 &__info {
   font-family: "Source Sans Pro";  
   font-weight: 400;
@@ -55,12 +123,13 @@ color: #f5ebeb;
 margin-top: 80px;
 text-align: center;
 }
-}
-.wrapper {
+    }   
+    .wrapper {
    background-color: black;
-background-image: url("../../img/hero/hawaii-pig.webp");
+background-image: url("../img/hero/hawaii-pig.webp");
 background-position:  1200px ;
 background-repeat: no-repeat;
 background-size: 900px 600px;
  
+}
 }

@@ -1,19 +1,89 @@
-.burger {
-    //  margin-right: auto;
- fill: #000;
-background-color: transparent;
+.header__burger-btn {
+  display: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.header__burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  left: 5px;
+  z-index: 3;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+.header__burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.header__burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
 
+.header.open .header__burger-btn span {
+  background-color: #fff;
 }
-.burger__icon {
-    
-     width: 40px;
-height: 40px;
+.header.open .header__burger-btn span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
 }
-@media screen and (min-width: 768px){
-    .burger {
-        display: none;
-    }
-    .menu {
-        display: none;
-    }
+
+
+.header.open .header__burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+@media screen and (max-width: 1199px) {
+  .header__burger-btn {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    left: -290px;
+    top: 0;
+    width: 290px;
+    background-color: #80505d;
+    padding: 75px 20px 50px 20px;
+    transition: transform 0.5s;
+  }
+  .menu__list {
+    display: block;
+    flex-direction: column;
+  }
+  .menu__link {
+    color: #fff;
+    font-size: 21px;
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+  }
+  .header.open .menu {
+    transform: translateX(100%);
+  }
+
+  ul li ul.dropdown li {
+  display: block;
+}
+ul li ul.dropdown {
+    background: #80505d;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+ul li ul li a:hover {
+  background: #856a77;
+  border-radius: 5px;
+}
+ul li:hover ul.dropdown {
+  display: block;
+  padding: 0;
+}
+.dropdown__link {
+       color: #fff;
+    font-size: 21px;
+    text-decoration: none;
+}
 }

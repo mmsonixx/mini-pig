@@ -24,34 +24,33 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header open">
+      <button class="header__burger-btn" id="burger">
+         <span></span><span></span><span></span>
+        </button>
       <div class="container header__container">
         <!-- Mobile menu -->
-        <button class="burger" data-menu-open>
-          <svg class="burger__icon">
-            <use href="./img/icons/symbol-defs.svg#icon-burger"></use>
-          </svg>
-        </button>
-     <nav>
-  <ul>
-    <li><a href="#0">Home</a></li>
-    <li><a href="#0">About Mini Pig</a></li>
-    <li>
-      <a href="#0">More</a>
-      <ul>
-        <li><a href="#0">Food</a></li>
-        <li><a href="#0">Health</a></li>
-        <li><a href="#0">Care</a></li>
-      </ul>
-    </li>
-    <li><a href="#0">Contact</a></li>
-  </ul>
-</nav>
+        
+
         <a class="header__logo" href="./index.html"
           ><span class="header__logo__color">Mini</span>Pig
           <svg class="header__icon__logo">
             <use href="./img/icons/symbol-defs.svg#icon-pig"></use></svg
         ></a>
+        <nav class="menu">
+          <ul class="menu__list" style="margin-bottom: 0">
+            <li class="menu__item"><a  class="menu__link" href="#about">About Mini Pig</a></li>
+            <li class="menu__item">
+              <a class="menu__link" href="#information">Contents</a>
+              <ul class="dropdown">
+                <li><a class="dropdown__link" href="#information">Nutrition</a></li>
+                <li><a class="dropdown__link" href="#information">Health</a></li>
+                <li><a class="dropdown__link" href="#information">Care</a></li>
+              </ul>
+            </li>
+            <li class="menu__item"><a class="menu__link" href="#carousel">Picture</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="wrapper">
@@ -65,13 +64,15 @@
           </p>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container about__container">
-          <ul class="about__list">
+          <ul class="about__list" style="padding-left: 0">
             <li class="about__item">
-              <svg class="about__icons">
-                <use href="./img/icons/symbol-defs.svg#icon-ruler"></use>
-              </svg>
+              <div class="about__box">
+                <svg class="about__icons">
+                  <use href="./img/icons/symbol-defs.svg#icon-ruler"></use>
+                </svg>
+              </div>
               <h3 class="about__subtitle">Size</h3>
               <p class="about__info">
                 The height at the withers is up to 50 cm, but much depends on
@@ -79,9 +80,11 @@
               </p>
             </li>
             <li class="about__item">
-              <svg class="about__icons">
-                <use href="./img/icons/symbol-defs.svg#icon-scales"></use>
-              </svg>
+              <div class="about__box">
+                <svg class="about__icons">
+                  <use href="./img/icons/symbol-defs.svg#icon-scales"></use>
+                </svg>
+              </div>
               <h3 class="about__subtitle">Scale</h3>
               <p class="about__info">
                 Mini-pigs come in various breeds, and depending on this, their
@@ -89,9 +92,11 @@
               </p>
             </li>
             <li class="about__item">
-              <svg class="about__icons">
-                <use href="./img/icons/symbol-defs.svg#icon-brush"></use>
-              </svg>
+              <div class="about__box">
+                <svg class="about__icons">
+                  <use href="./img/icons/symbol-defs.svg#icon-brush"></use>
+                </svg>
+              </div>
               <h3 class="about__subtitle">Coloration</h3>
               <p class="about__info">
                 They can be sandy, red, black, marble, tiger, or mixed colors.
@@ -103,7 +108,7 @@
       </section>
     </div>
     <div class="information__wrapper">
-      <section class="information">
+      <section class="information" id="information">
         <div class="container information__container">
           <h2 class="information__title">Conditions of detention</h2>
           <div class="accordion" id="accordionExample">
@@ -228,7 +233,7 @@
         </div>
       </section>
     </div>
-    <section class="carousell">
+    <section class="carousell" id="carousel">
       <div class="container">
         <h3 class="carousel__title">Mini pig breeds</h3>
         <div class="carousel" mask>
@@ -340,7 +345,7 @@
             class="btn btn-outline-light btn-floating m-1 footer__link"
             href="#!"
             role="button"
-            style="border-radius: 50%;"
+            style="border-radius: 50%"
             ><i class="fab fa-facebook-f"></i>
             <svg class="footer__iocns">
               <use href="./img/icons/symbol-defs.svg#icon-facebook"></use>
@@ -351,7 +356,7 @@
             class="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            style="border-radius: 50%;"
+            style="border-radius: 50%"
             ><i class="fab fa-twitter"></i>
             <svg class="footer__iocns">
               <use href="./img/icons/symbol-defs.svg#icon-twitter"></use>
@@ -362,7 +367,7 @@
             class="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            style="border-radius: 50%;"
+            style="border-radius: 50%"
             ><i class="fab fa-google"></i>
             <svg class="footer__iocns">
               <use href="./img/icons/symbol-defs.svg#icon-google"></use>
@@ -373,7 +378,7 @@
             class="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            style="border-radius: 50%;"
+            style="border-radius: 50%"
             ><i class="fab fa-instagram"></i>
             <svg class="footer__iocns">
               <use href="./img/icons/symbol-defs.svg#icon-instagram"></use>
@@ -384,7 +389,7 @@
             class="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            style="border-radius: 50%;"
+            style="border-radius: 50%"
           >
             <svg class="footer__iocns">
               <use href="./img/icons/symbol-defs.svg#icon-linkedin"></use>
@@ -395,7 +400,7 @@
             class="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            style="border-radius: 50%; color: black;"
+            style="border-radius: 50%; color: black"
           >
             <svg class="footer__iocns">
               <use href="./img/icons/symbol-defs.svg#icon-github"></use>
@@ -406,9 +411,7 @@
 
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2020 Copyright:
-        <a class="text-white" href="https://e-zoo.com.ua/"
-          >E-ZOO.com</a
-        >
+        <a class="text-white" href="https://e-zoo.com.ua/">E-ZOO.com</a>
       </div>
     </footer>
     <script
@@ -426,6 +429,7 @@
       integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/main.js"></script>
+    <script defer src="./js/menu.js"></script>
   </body>
 </html>
